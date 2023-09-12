@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="thank_you.html" method="submit">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Ali Alali">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="ali@example.com">
+
+        <label for="proposal-type">Gender</label>
+        <select id="proposal-type" name="proposal-type">
+            <option value="project">Male</option>
+            <option value="partnership">Female</option>
+        </select>
+
+        <label>What skills do you possess? (Check all that apply)</label>
+        <input type="checkbox" id="skill-webdevf" name="skills" value="webdevf">
+        <label for="skill-webdevf">Web Development -Frontend-</label>
+        <input type="checkbox" id="skill-webdevb" name="skills" value="webdevb">
+        <label for="skill-webdevb">Web Development -Backend-</label>
+        <input type="checkbox" id="skill-mobiledev" name="skills" value="mobiledev">
+        <label for="skill-design">Mobile Development</label>
+
+        <label>How did you hear about us?</label>
+        <input type="radio" id="heard-online" name="heard" value="online">
+        <label for="heard-online">Online</label>
+        <input type="radio" id="heard-friend" name="heard" value="friend">
+        <label for="heard-friend">From a Friend</label>
+        <input type="radio" id="newspaper" name="heard" value="newspaper">
+        <label for="heard-friend">From a newspaper</label>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments here"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
