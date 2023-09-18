@@ -1,0 +1,29 @@
+body {
+    background-color: #121212;
+    color: #ffffff; /* Text color */
+}
+
+.header {
+    background-color: #333;
+    color: #ffffff;
+}
+
+a {
+    color: #00a8e8;
+}
+
+.button {
+    background-color: #444;
+    color: #ffffff;
+    border: 2px solid #333;
+}
+
+table {
+    background-color: #333;
+    color: #ffffff;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #555;
+}
