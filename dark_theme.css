@@ -31,20 +31,3 @@ table, th, td {
 th {
     text-transform: uppercase;
 }
-
-a {
-    color: #66BF84; 
-}
-
-.top {
-    background-color: #FFD700;
-}
-
-em {
-    background-color: blue;
-}
-
-#the_most_important {
-    text-transform: uppercase;
-    background-color: gold;
-}

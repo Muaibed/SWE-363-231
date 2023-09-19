@@ -1,0 +1,72 @@
+a {
+    color: #66BF84; 
+}
+
+.top {
+    background-color: #FFD700;
+}
+
+em {
+    background-color: blue;
+}
+
+#the_most_important {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+h2 {
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+h2 + p::first-letter {
+    font-size: x-large;
+}
+
+tr:hover {
+    background-color: lightblue; 
+}
+
+td:hover {
+    background-color: lightblue;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.first_nav_item a {
+    text-decoration: underline;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate color of your choice */
+}
+
+::selection {
+    background-color: #ffcc00; 
+}
+
+body a {
+    cursor: pointer;
+}
+
+input {
+    height: 20px;
+}
+
+input[type="text"] {
+    border-color: lightgray;
+}
+
+input[name="message"] {
+    height: 50px;
+}
