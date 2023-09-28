@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap');
+
+#above-navbar ul {
+    text-align: left;
+    margin-bottom: 0;
+}
+#above-navbar ul li {
+    display: inline-block;
+    margin-right: 0px;
+}
+
+#above-navbar ul li:last-child {
+    margin-right: 862px;
+    margin-left: 62px;
+}
+
+#above-navbar svg {
+    margin-right: 37px;
+}
+
+h1 {
+    color: #323334;
+    font-family: 'Scheherazade New', serif;    
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 62px;
+    margin-bottom: 0px;
+    margin-right: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding: 0;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    height: 46px;
+    width: 19px;
+    padding: 69px;
+    text-decoration: none;
+    color: #323334;
+    font-family: 'Scheherazade New', serif;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#under-navbar ul{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#under-navbar ul li div svg {
+    height: 15px;
+    width: 22px;
+}
+
+#under-navbar li:first-child {
+    margin-right: 0;
+}
+
+#under-navbar ul li {
+    display: inline-block;
+    margin-right: 313px;
+}
+
+#under-navbar span {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: 'Scheherazade New', serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#header-img {
+    border: 1px solid #000;
+    fill: rgba(219, 208, 204, 0.80);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#header-img image {
+    width: 300px;
+}
+
+#header-img text {
+    fill: #323334;
+    text-transform: uppercase;
+    font-family: 'Amiri', serif;    
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#header-img #sale {
+    fill: #A86A3D;
+    font-family: 'Amiri', serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#footer {
+    background: #323334;
+}
+
+#footer-bottom {
+    background: #222;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(455px, 1fr));
+    grid-gap: 1rem;
+    margin-bottom: 74px;
+    color: #323334;
+    font-family: 'Scheherazade New', serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+.products-grid > div {
+    background: #FFF;
+    padding: 1rem;
+  }
+
+.products-grid > div::before {
+    content: "";
+    /* padding-bottom: 100%; */
+    display: block;
+  }
+
+.products-grid > div {
+    display: grid;
+  }
+
+.products-grid > div::before,
+.products-grid > div > img {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+.products-grid > div > img {
+    background-color: #EEE;
+    width: 306px;
+    height: 365px;
+    object-fit: contain;
+  }
+
+#products {
+    margin-left: 329px;
+}
+
+#filter {
+    margin-left: 73px;
+    width: 329px; 
+    height: 100px; 
+    float: left;
+}
+
+footer {
+    background-color: #323334;
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+footer span {
+    color: #FFF;
+    font-family: 'Scheherazade New', serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 33px;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.50);
+    font-family: 'Scheherazade New', serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* margin-top: px; */
+    margin-left: 33px;
+}
+
+#footer-of-footer {
+    background-color: #222222;
+    height: 36px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+#footer-of-footer span {
+    color: #FFF;
+}
