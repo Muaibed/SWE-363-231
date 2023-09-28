@@ -91,6 +91,90 @@ nav a {
     line-height: normal;
 }
 
+/* #navber ul li:nth-child(1):hover {
+
+} */
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#navbar:hover {
+    display: block;
+}
+
+#navbar:hover .bar2:nth-child(2) {
+    display: inline;
+    animation: fadeIn 0.5s;
+}
+
+#navbar:hover .bar2:nth-child(3) {
+    display: inline;
+    animation: fadeIn 1s;
+}
+
+#navbar:hover .bar2:nth-child(4) {
+    display: inline;
+    animation: fadeIn 1.5s;
+}
+
+#navbar:hover .bar2:nth-child(5) {
+    display: inline;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  
+
+#navbar:hover .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#navbar:hover .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#navbar:hover .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+#navbar ul li:nth-child(2) {
+    display: none;
+}
+
+#navbar ul li:nth-child(3) {
+    display: none;
+}
+
+#navbar ul li:nth-child(4) {
+    display: none;
+}
+
+#navbar ul li:nth-child(5) {
+    display: none;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
 #under-navbar ul{
     text-align: center;
     margin-top: 30px;
@@ -147,6 +231,17 @@ nav a {
     font-weight: 700;
     line-height: normal;
 }
+
+#header-img button:hover {
+    animation: sampleAnimation 2s;
+} 
+
+@keyframes sampleAnimation {
+100%{
+    background-color:white;
+    }
+}
+
 
 #footer {
     background: #323334;
