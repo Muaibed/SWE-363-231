@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #363062;
+        }
+
+        .cell {
+            font-family: sans-serif;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: #363062;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell:nth-child(1) {
+            border-right: 2px solid #F5F5F5;
+        }
+
+        .cell:nth-child(3){
+            border-left: 2px solid #F5F5F5;
+        }
+
+        .row:nth-child(1) .cell:nth-child(1),
+        .row:nth-child(1) .cell:nth-child(2),
+        .row:nth-child(1) .cell:nth-child(3),
+        .row:nth-child(2) .cell:nth-child(1),
+        .row:nth-child(2) .cell:nth-child(2),
+        .row:nth-child(2) .cell:nth-child(3){
+            border-bottom: 2px solid #F5F5F5;
+        }
+
+        .cell:not(.clicked):hover {
+            background-color: rgb(245, 245, 245, 0.5);
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .clicked {
+            background-color: rgb(245, 245, 245, 0.5);
+        }
+
+        .reset {
+            margin-top: 50px;
+            width: 125px;
+            height: 50px;
+            background-color: #F5F5F5;
+            border-radius: 10%;
+            border-color: transparent;
+        }
+
+        .reset:hover {
+            background-color: rgb(245, 245, 245, 0.5);
+        }
+
+        #turn {
+            color: #F99417;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1 id="turn">
+    </h1>
+    <!-- Board -->
+    <div class="board" id="board">
+        <div class="board">
+        
+        <script>
+            let turn;
+
+            function initializeBoard() {
+                turn = "X"
+                var aboveText = document.getElementById('turn');
+                var turnSpanText = document.createElement('span');
+                aboveText.appendChild(turnSpanText)
+                turnSpanText.innerText = turn
+                aboveText.innerHTML = "Now it's " + turnSpanText.outerHTML + " turn"
+                
+                var board = document.getElementById('board');
+                board.innerHTML = '';
+                
+                var i = 0;
+                for (var k = 0; k < 3; k++) {
+                    var row = document.createElement('div');
+                    row.className = 'row'
+                    board.append(row);
+                    for (var count = 0; count < 3; count++) {
+                        var cell = document.createElement('div');
+                        cell.className = 'cell';
+                        cell.dataset.index = i++;
+                        row.appendChild(cell);
+                    }
+                }
+            }
+            
+            // decided which turn is it
+            let gameEnded = false
+
+            // when we click on a cell add the letter 
+            let board = document.getElementsByClassName("board")[0]
+            board.addEventListener("click", cellClicked)
+
+            chosen_squares = 0
+            function cellClicked(event) {
+                let cell = event.target
+
+                if (cell.classList.contains("clicked")) 
+                    return
+                
+                cell.innerText = turn
+                cell.classList.add("clicked", turn);
+
+                var gameWinner = hasWinner(turn)
+                
+                if (gameWinner) {
+                    // HW 
+                    document.querySelector("#turn").innerText = turn + " is the winner!"
+                    return
+                } else if (chosen_squares >= 8) {
+                    document.querySelector('#turn').innerText = "Draw"
+                    return
+                }
+                
+                // change turn
+                turn = turn === "X" ? "O" : "X"
+                
+                //change title
+                turnLetter = document.querySelector("#turn span")
+                turnLetter.innerText = turn  
+                
+                chosen_squares++
+            }
+
+            function hasWinner(turn) {
+                var cells = document.querySelectorAll('.cell')
+
+                if (cells[0].innerText === turn && cells[1].innerText === turn && cells[2].innerText === turn
+                    || cells[3].innerText === turn && cells[4].innerText === turn && cells[5].innerText === turn
+                    || cells[6].innerText === turn && cells[7].innerText === turn && cells[8].innerText === turn)
+                    return true
+
+                if (cells[0].innerText === turn && cells[3].innerText === turn && cells[6].innerText === turn
+                    || cells[1].innerText === turn && cells[4].innerText === turn && cells[7].innerText === turn
+                    || cells[2].innerText === turn && cells[5].innerText === turn && cells[8].innerText === turn)
+                    return true
+
+                if (cells[0].innerText === turn && cells[4].innerText === turn && cells[8].innerText === turn
+                    || cells[2].innerText === turn && cells[4].innerText === turn && cells[6].innerText === turn)
+                    return true
+
+                return false
+            }
+
+            initializeBoard()
+        </script>
+    </div>
+    </div>
+
+    <div>
+        <button id="reset" class="reset">
+            reset
+        </button>
+
+        <script>
+                var cells = document.querySelectorAll('.cell')
+                var resetButton = document.getElementById('reset');
+
+                resetButton.addEventListener('click', function() {
+                    initializeBoard()
+                    chosen_squares = 0 
+                    // cells.forEach(function(cell) {
+                    //     cell.innerText = ""
+                    //     cell.classList = ['cell']
+                    // });
+                });
+        </script>
+    </div>
+</body>
+
+</html>

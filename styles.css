@@ -1,39 +1,8 @@
-/* a {
-    color: #66BF84; 
-} */
-
-/* .top {
-    background-color: #FFD700;
-} */
-
-/* em {
-    background-color: blue;
-} */
-
-/* #the_most_important {
-    text-transform: uppercase;
-    background-color: gold;
-} */
-
-/* h2 {
-    font-family: sans-serif;
+.content-container {
+    display: block;
+    /* opacity: 0; */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
-}
-
-h2 + p::first-letter {
-    font-size: x-large;
-}
-
-tr:hover {
-    background-color: lightblue; 
-}
-
-td:hover {
-    background-color: lightblue;
-} */
 #above-navbar ul {
     text-align: left;
     margin-bottom: 0;
@@ -123,6 +92,11 @@ nav a {
 }
 
 #navbar:hover .bar2:nth-child(5) {
+    display: inline;
+    animation: fadeIn 2s;
+}
+
+#navbar:hover .bar2:nth-child(6) {
     display: inline;
     animation: fadeIn 2s;
 }
