@@ -1,0 +1,12 @@
+{
+  "name": "swe363-231-exercises",
+  "version": "1.0.0",
+  "description": "This repository contains SWE363 exercises",
+  "main": "crypto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
